@@ -4,12 +4,119 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+
   <title>Cinemateka</title>
 </head>
 <body>
-  <h1>Cinemateka</h1>
+  <header id="header" class="header-container header-container--long">
+    <span class="header-arrow inactive">&lt;</span>
+    <h1 class="header-title">Cinemateka</h1>
+    <h2 class="header-title header-title--categoryView inactive">Acción</h2>
 
+    <form action="" id="searchForm" class="header-searchForm">
+      <input type="text" placeholder="Star Wars">
+      <button>🔍</button>
+    </form>
+  </header>
+
+  <section id="trendingPreview" class="trendingPreview-container">
+    <div class="trendingPreview-header">
+      <h2 class="trendingPreview-title">Tendencias</h2>
+      <button class="trendingPreview-btn">Ver más</button>
+    </div>
+
+    <article class="trendingPreview-movielist">
+      <div class="movie-container">
+        <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+      </div>
+
+      <div class="movie-container">
+        <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+      </div>
+
+      <div class="movie-container">
+        <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+      </div>
+    </article>
+  </section>
+
+  <section id="categoriesPreview" class="categoriesPreview-container">
+    <h2 class="categoriesPreview-title">Categorías</h2>
+
+    <article class="categoriesPreview-list">
+      <div class="category-container">
+        <h3 id="id28" class="category-title">Romance</h3>
+      </div>
+
+      <div class="category-container">
+        <h3 id="id16" class="category-title">Drama</h3>
+      </div>
+
+      <div class="category-container">
+        <h3 id="id14" class="category-title">Acción</h3>
+      </div>
+    </article>
+  </section>
+
+  <section id="genericList" class="genericList-container inactive">
+    <div class="movie-container">
+      <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+    </div>
+
+    <div class="movie-container">
+      <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+    </div>
+
+    <div class="movie-container">
+      <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+    </div>
+  </section>
+
+  <section id="movieDetail" class="movieDetail-container inactive">
+    <h2 class="movieDetail-title">Star Wars</h2>
+    <span class="movieDetail-score">8.9</span>
+    <p class="movieDetail-description">Luke Skywalker se une a la lucha contra el Imperio Galáctico junto a Han Solo y la Princesa Leia.</p>
+  
+    <article class="categories-list">
+      <div class="category-container">
+        <h3 id="id28" class="category-title">Romance</h3>
+      </div>
+
+      <div class="category-container">
+        <h3 id="id16" class="category-title">Drama</h3>
+      </div>
+
+      <div class="category-container">
+        <h3 id="id14" class="category-title">Acción</h3>
+      </div>
+    </article>
+
+    <article class="relatedMovies-container">
+      <h2 class="relatedMovies-title">Películas similares</h2>
+
+      <div class="relatedMovies-scrollContainer">
+        <div class="movie-container">
+          <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+        </div>
+
+        <div class="movie-container">
+          <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+        </div>
+
+        <div class="movie-container">
+          <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>Hecho con amor 💚 por Karajoteka</footer>
+  
   <script src="./src/secrets.js"></script>
   <script src="./src/main.js"></script>
 </body>

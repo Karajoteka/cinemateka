@@ -1,1 +1,177 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #000000;
+}
+
+h1, h2, h3 {
+  font-family: "Dosis", sans-serif;
+  color: #FF0000;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+body {
+  background-color: #000000;
+  color: #B2B1B9;
+  width: 375px;
+  padding: 10px;
+  font-family: "Red Hat Text", sans-serif;
+}
+body .header-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .header-container .header-title {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+body .header-container .header-searchForm input {
+  width: 320px;
+  padding: 5px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: #3D0000;
+  color: #EEEEEE;
+}
+body .header-container .header-searchForm button {
+  width: 25px;
+  height: 26px;
+  background-color: #950101;
+  border-radius: 0 10px 10px 0;
+}
+body .header-container .header-searchForm button:hover {
+  cursor: pointer;
+}
+body .trendingPreview-container .trendingPreview-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+body .trendingPreview-container .trendingPreview-header .trendingPreview-btn {
+  width: 80px;
+  border: none;
+  border-radius: 20px;
+  background-color: #950101;
+  color: #EEEEEE;
+  font-family: "Red Hat Text", sans-serif;
+}
+body .trendingPreview-container .trendingPreview-header .trendingPreview-btn:hover {
+  cursor: pointer;
+}
+body .trendingPreview-container .trendingPreview-movielist {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  white-space: nowrap;
+}
+body .trendingPreview-container .trendingPreview-movielist .movie-container {
+  scroll-snap-align: center;
+}
+body .trendingPreview-container .trendingPreview-movielist .movie-container img {
+  width: 150px;
+  box-shadow: 5px 5px 10px rgb(19, 19, 19);
+}
+body .categoriesPreview-container .categoriesPreview-title {
+  margin-bottom: 10px;
+}
+body footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#id28 {
+  --idColor: #EECC75;
+}
+
+#id12 {
+  --idColor: #CAD297;
+}
+
+#id16 {
+  --idColor: #B7EAC5;
+}
+
+#id35 {
+  --idColor: #A2EEE5;
+}
+
+#id80 {
+  --idColor: darkblue;
+}
+
+#id99 {
+  --idColor: purple;
+}
+
+#id18 {
+  --idColor: peru;
+}
+
+#id10751 {
+  --idColor: yellow;
+}
+
+#id14 {
+  --idColor: rebeccapurple;
+}
+
+#id36 {
+  --idColor: greenyellow;
+}
+
+#id27 {
+  --idColor: lightcyan;
+}
+
+#id10402 {
+  --idColor: darkkhaki;
+}
+
+#id9648 {
+  --idColor: palegreen;
+}
+
+#id10749 {
+  --idColor: palevioletred;
+}
+
+#id878 {
+  --idColor: olive;
+}
+
+#id10770 {
+  --idColor: royalblue;
+}
+
+#id53 {
+  --idColor: wheat;
+}
+
+#id10752 {
+  --idColor: hotpink;
+}
+
+#id37 {
+  --idColor: cadetblue;
+}
+
+.inactive {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
