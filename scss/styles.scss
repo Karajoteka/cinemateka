@@ -9,6 +9,7 @@ $black: #000000;
 $very-dark-red:#3D0000;
 $medium-red: #950101;
 $strong-red: #FF0000; 
+$yellow: #E7B10A;
 $light-grey: #B2B1B9;
 $white: #EEEEEE;
 
@@ -46,9 +47,30 @@ body {
   padding: 10px;
   font-family: $font-family-text;
 
-  .header-container {
+// Header
+
+  .header-container--long {
+    width: 100%;
+    height: 250px;
+    background-image: url('https://www.vintagemovieposters.co.uk/wp-content/uploads/2018/11/IMG_2172-2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-container {   
     width: 100%;
     margin-bottom: 20px;
+
+    .header-arrow {
+      margin-left: 10px;
+      color: $strong-red;
+      font-size: 5rem;
+      cursor: pointer;
+    }
+    .header-arrow--white {
+      color: white;
+    }
 
     .header-title {
       font-size: 4rem;
@@ -65,6 +87,9 @@ body {
         border-radius: 10px 0 0 10px;
         background-color: $very-dark-red;
         color: $white;
+        &::placeholder {
+          font-family: $font-family-text;
+        }
       }
 
       button {
@@ -78,6 +103,8 @@ body {
       }  
     }
   }
+
+// Trending
 
   .trendingPreview-container {
     
@@ -110,6 +137,7 @@ body {
 
       .movie-container {
         scroll-snap-align: center;
+        cursor: pointer;
 
         img {
           width: 150px;
@@ -119,6 +147,8 @@ body {
     }
   }
 
+// Categories
+
   .categoriesPreview-container {
 
     .categoriesPreview-title {
@@ -126,14 +156,87 @@ body {
     }
   }
 
+// Generic List (search, trending & category)  
+
+
+// Movie Detail
+
+  .movieDetail-container {
+
+    .title-and-score {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+
+      .movieDetail-title {
+
+      }
+
+      .movieDetail-score {
+        color: $yellow;
+        font-size: 2.5rem;
+        margin-right: 10px;
+
+        &::before {
+          content: '⭐';
+          font-size: 2.2rem;
+          padding-right: 4px;
+        }
+      }
+    
+    .movieDetail-description {
+      margin: 10px 0 20px 0;
+      font-size: 1.5rem;
+    }
+
+    .categories-list {
+
+    }
+
+    .relatedMovies-container {
+      margin-top: 20px;
+      
+      .relatedMovies-title {
+        margin-bottom: 20px;
+      }
+
+      .relatedMovies-scrollContainer {        
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        white-space: nowrap;
+
+        .movie-container {
+          scroll-snap-align: center;
+          cursor: pointer;
+
+          img {
+            width: 150px;
+            box-shadow: 5px 5px 10px rgb(19, 19, 19);
+          }
+        }
+      }
+    }
+  }
+
+// Footer
+
   footer {
     margin-top: 20px;
     text-align: center;
   }
 }
 
+// Navigation
 
-
+.inactive {
+  display: none;
+}
 
 
 
@@ -163,6 +266,3 @@ body {
 #id10752 { --idColor: hotpink; }
 #id37 { --idColor: cadetblue; }
 
-.inactive {
-  display: none;
-}

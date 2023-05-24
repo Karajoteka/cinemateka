@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,9 +31,26 @@ body {
   padding: 10px;
   font-family: "Red Hat Text", sans-serif;
 }
+body .header-container--long {
+  width: 100%;
+  height: 250px;
+  background-image: url("https://www.vintagemovieposters.co.uk/wp-content/uploads/2018/11/IMG_2172-2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body .header-container {
   width: 100%;
   margin-bottom: 20px;
+}
+body .header-container .header-arrow {
+  margin-left: 10px;
+  color: #FF0000;
+  font-size: 5rem;
+  cursor: pointer;
+}
+body .header-container .header-arrow--white {
+  color: white;
 }
 body .header-container .header-title {
   font-size: 4rem;
@@ -46,6 +64,12 @@ body .header-container .header-searchForm input {
   border-radius: 10px 0 0 10px;
   background-color: #3D0000;
   color: #EEEEEE;
+}
+body .header-container .header-searchForm input::-moz-placeholder {
+  font-family: "Red Hat Text", sans-serif;
+}
+body .header-container .header-searchForm input::placeholder {
+  font-family: "Red Hat Text", sans-serif;
 }
 body .header-container .header-searchForm button {
   width: 25px;
@@ -83,6 +107,7 @@ body .trendingPreview-container .trendingPreview-movielist {
 }
 body .trendingPreview-container .trendingPreview-movielist .movie-container {
   scroll-snap-align: center;
+  cursor: pointer;
 }
 body .trendingPreview-container .trendingPreview-movielist .movie-container img {
   width: 150px;
@@ -91,9 +116,55 @@ body .trendingPreview-container .trendingPreview-movielist .movie-container img 
 body .categoriesPreview-container .categoriesPreview-title {
   margin-bottom: 10px;
 }
+body .movieDetail-container .title-and-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .movieDetail-container .movieDetail-score {
+  color: #E7B10A;
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+body .movieDetail-container .movieDetail-score::before {
+  content: "⭐";
+  font-size: 2.2rem;
+  padding-right: 4px;
+}
+body .movieDetail-container .movieDetail-description {
+  margin: 10px 0 20px 0;
+  font-size: 1.5rem;
+}
+body .movieDetail-container .relatedMovies-container {
+  margin-top: 20px;
+}
+body .movieDetail-container .relatedMovies-container .relatedMovies-title {
+  margin-bottom: 20px;
+}
+body .movieDetail-container .relatedMovies-container .relatedMovies-scrollContainer {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  white-space: nowrap;
+}
+body .movieDetail-container .relatedMovies-container .relatedMovies-scrollContainer .movie-container {
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+body .movieDetail-container .relatedMovies-container .relatedMovies-scrollContainer .movie-container img {
+  width: 150px;
+  box-shadow: 5px 5px 10px rgb(19, 19, 19);
+}
 body footer {
   margin-top: 20px;
   text-align: center;
+}
+
+.inactive {
+  display: none;
 }
 
 #id28 {
@@ -170,8 +241,4 @@ body footer {
 
 #id37 {
   --idColor: cadetblue;
-}
-
-.inactive {
-  display: none;
 }/*# sourceMappingURL=styles.css.map */
