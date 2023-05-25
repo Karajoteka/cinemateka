@@ -92,8 +92,6 @@ body .trendingPreview-container .trendingPreview-header .trendingPreview-btn {
   background-color: #950101;
   color: #EEEEEE;
   font-family: "Red Hat Text", sans-serif;
-}
-body .trendingPreview-container .trendingPreview-header .trendingPreview-btn:hover {
   cursor: pointer;
 }
 body .trendingPreview-container .trendingPreview-movielist {
@@ -115,6 +113,26 @@ body .trendingPreview-container .trendingPreview-movielist .movie-container img 
 }
 body .categoriesPreview-container .categoriesPreview-title {
   margin-bottom: 10px;
+}
+body .genericList-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+body .genericList-container .movie-container img {
+  width: 150px;
+  box-shadow: 5px 5px 10px rgb(19, 19, 19);
+}
+body .genericList-container .seeMore-btn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #950101;
+  color: #EEEEEE;
+  font-family: "Red Hat Text", sans-serif;
+  cursor: pointer;
 }
 body .movieDetail-container .title-and-score {
   display: flex;

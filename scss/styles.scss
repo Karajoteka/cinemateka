@@ -119,10 +119,8 @@ body {
         border-radius: 20px;
         background-color: $medium-red;
         color: $white;
-        font-family: $font-family-text;
-        &:hover {
-          cursor: pointer;
-        }
+        font-family: $font-family-text;        
+        cursor: pointer;        
       }
     }
 
@@ -158,6 +156,31 @@ body {
 
 // Generic List (search, trending & category)  
 
+  .genericList-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .movie-container {
+
+      img {
+        width: 150px;
+        box-shadow: 5px 5px 10px rgb(19, 19, 19);
+      }
+    }
+
+    .seeMore-btn {
+      width: 80px;
+      height: 30px;
+      border: none;
+      border-radius: 20px;
+      background-color: $medium-red;
+      color: $white;
+      font-family: $font-family-text;        
+      cursor: pointer;
+    }
+  }
 
 // Movie Detail
 
@@ -166,8 +189,7 @@ body {
     .title-and-score {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      
+      align-items: center;     
     }
 
       .movieDetail-title {

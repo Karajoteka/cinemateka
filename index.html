@@ -13,12 +13,12 @@
   <title>Cinemateka</title>
 </head>
 <body>
-  <header id="header" class="header-container header-container--long">
+  <header id="header" class="header-container">
     <span class="header-arrow">&lt;</span>
     <h1 class="header-title inactive">Cinemateka</h1>
     <h2 class="header-title header-title--categoryView inactive">Acción</h2>
 
-    <form action="" id="searchForm" class="header-searchForm inactive">
+    <form action="" id="searchForm" class="header-searchForm">
       <input type="text" placeholder="Star Wars">
       <button>🔍</button>
     </form>
@@ -27,7 +27,7 @@
   <section id="trendingPreview" class="trendingPreview-container inactive">
     <div class="trendingPreview-header">
       <h2 class="trendingPreview-title">Tendencias</h2>
-      <button class="trendingPreview-btn">Ver más</button>
+      <button class="trendingPreview-btn seeMore-btn">Ver más</button>
     </div>
 
     <article class="trendingPreview-movielist">
@@ -63,7 +63,7 @@
     </article>
   </section>
 
-  <section id="genericList" class="genericList-container inactive">
+  <section id="genericList" class="genericList-container">
     <div class="movie-container">
       <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
     </div>
@@ -75,9 +75,10 @@
     <div class="movie-container">
       <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
     </div>
+    <button class="trendingPreview-btn seeMore-btn">Ver más</button>
   </section>
 
-  <section id="movieDetail" class="movieDetail-container">
+  <section id="movieDetail" class="movieDetail-container inactive">
     <div class="title-and-score">
       <h2 class="movieDetail-title">Star Wars</h2>
       <span class="movieDetail-score">8.9</span>
