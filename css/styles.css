@@ -111,8 +111,14 @@ body .trendingPreview-container .trendingPreview-movielist .movie-container img 
   width: 150px;
   box-shadow: 5px 5px 10px rgb(19, 19, 19);
 }
+body .categoriesPreview-container {
+  margin-bottom: 20px;
+}
 body .categoriesPreview-container .categoriesPreview-title {
   margin-bottom: 10px;
+}
+body .categoriesPreview-container .categoriesPreview-title::before {
+  content: "••••";
 }
 body .genericList-container {
   display: flex;

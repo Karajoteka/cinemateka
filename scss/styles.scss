@@ -148,9 +148,17 @@ body {
 // Categories
 
   .categoriesPreview-container {
+    margin-bottom: 20px;
 
     .categoriesPreview-title {
       margin-bottom: 10px;
+
+      &::before {
+        content: '••••';
+        color: transparent;
+        // Todo cambia de color por ID de la categoría
+        background-color: ;
+      }
     }
   }
 
@@ -207,7 +215,56 @@ body {
           padding-right: 4px;
         }
       }
-    
+
+      $id-map: (
+        "#id28": #EECC75,
+        "#id12": #CAD297,
+        "#id16": #B7EAC5,
+        "#id35": #A2EEE5,
+        "#id80": darkblue,
+        "#id99": purple,
+        "#id18": peru,
+        "#id10751": yellow,
+        "#id14": rebeccapurple,
+        "#id36": greenyellow,
+        "#id27": lightcyan,
+        "#id10402": darkkhaki,
+        "#id9648": palegreen,
+        "#id10749": palevioletred,
+        "#id878": olive,
+        "#id10770": royalblue,
+        "#id53": wheat,
+        "#id10752": hotpink,
+        "#id37": cadetblue
+      );
+      
+      @each $selector, $color in $id-map {
+        #{$selector} {
+          --idColor: $color;
+        }
+      }
+      
+
+// #id28 { --idColor: #EECC75; }
+// #id12 { --idColor: #CAD297; }
+// #id16 { --idColor: #B7EAC5; }
+// #id35 { --idColor: #A2EEE5; }
+// #id80 { --idColor: darkblue; }
+// #id99 { --idColor: purple; }
+// #id18 { --idColor: peru; }
+// #id10751 { --idColor: yellow; }
+// #id14 { --idColor: rebeccapurple; }
+// #id36 { --idColor: greenyellow; }
+// #id27 { --idColor: lightcyan; }
+// #id10402 { --idColor: darkkhaki; }
+// #id9648 { --idColor: palegreen; }
+// #id10749 { --idColor: palevioletred; }
+// #id878 { --idColor: olive; }
+// #id10770 { --idColor: royalblue; }
+// #id53 { --idColor: wheat; }
+// #id10752 { --idColor: hotpink; }
+// #id37 { --idColor: cadetblue; }    
+
     .movieDetail-description {
       margin: 10px 0 20px 0;
       font-size: 1.5rem;
@@ -268,23 +325,5 @@ body {
 
 
 
-#id28 { --idColor: #EECC75; }
-#id12 { --idColor: #CAD297; }
-#id16 { --idColor: #B7EAC5; }
-#id35 { --idColor: #A2EEE5; }
-#id80 { --idColor: darkblue; }
-#id99 { --idColor: purple; }
-#id18 { --idColor: peru; }
-#id10751 { --idColor: yellow; }
-#id14 { --idColor: rebeccapurple; }
-#id36 { --idColor: greenyellow; }
-#id27 { --idColor: lightcyan; }
-#id10402 { --idColor: darkkhaki; }
-#id9648 { --idColor: palegreen; }
-#id10749 { --idColor: palevioletred; }
-#id878 { --idColor: olive; }
-#id10770 { --idColor: royalblue; }
-#id53 { --idColor: wheat; }
-#id10752 { --idColor: hotpink; }
-#id37 { --idColor: cadetblue; }
+
 

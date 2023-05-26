@@ -8,14 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+  <link rel="stylesheet" href="./styles.css">
 
   <title>Cinemateka</title>
 </head>
 <body>
   <header id="header" class="header-container">
-    <span class="header-arrow">&lt;</span>
-    <h1 class="header-title inactive">Cinemateka</h1>
+    <span class="header-arrow inactive">&lt;</span>
+    <h1 class="header-title">Cinemateka</h1>
     <h2 class="header-title header-title--categoryView inactive">Acción</h2>
 
     <form action="" id="searchForm" class="header-searchForm">
@@ -24,46 +25,30 @@
     </form>
   </header>
 
-  <section id="trendingPreview" class="trendingPreview-container inactive">
+  <section id="trendingPreview" class="trendingPreview-container">
     <div class="trendingPreview-header">
       <h2 class="trendingPreview-title">Tendencias</h2>
       <button class="trendingPreview-btn seeMore-btn">Ver más</button>
     </div>
 
-    <article class="trendingPreview-movielist">
-      <div class="movie-container">
+    <article class="trendingPreview-movieList">
+      <!-- <div class="movie-container">
         <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-      </div>
-
-      <div class="movie-container">
-        <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-      </div>
-
-      <div class="movie-container">
-        <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-      </div>
+      </div> -->
     </article>
   </section>
 
-  <section id="categoriesPreview" class="categoriesPreview-container inactive">
-    <h2 class="categoriesPreview-title">Categorías</h2>
+  <section id="categoriesPreview" class="categoriesPreview-container">
+    <h2 class="categoriesPreview-title inactive">Categorías</h2>
 
     <article class="categoriesPreview-list">
-      <div class="category-container">
+      <!-- <div class="category-container">
         <h3 id="id28" class="category-title">Romance</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id16" class="category-title">Drama</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id14" class="category-title">Acción</h3>
-      </div>
+      </div> -->
     </article>
   </section>
 
-  <section id="genericList" class="genericList-container">
+  <section id="genericList" class="genericList-container inactive">
     <div class="movie-container">
       <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
     </div>
@@ -75,7 +60,7 @@
     <div class="movie-container">
       <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
     </div>
-    <button class="trendingPreview-btn seeMore-btn">Ver más</button>
+    <!-- <button class="trendingPreview-btn seeMore-btn">Ver más</button> -->
   </section>
 
   <section id="movieDetail" class="movieDetail-container inactive">
@@ -118,8 +103,9 @@
     </article>
   </section>
 
-  <footer>Hecho con amor 💚 por Karajoteka</footer>
-  
+  <footer class="">Hecho con amor 💚 por Karajotek</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./src/secrets.js"></script>
   <script src="./src/main.js"></script>
 </body>
