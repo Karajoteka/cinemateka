@@ -142,11 +142,12 @@ button {
 }
 
 .header-container--long {
-  background-image: url('https://i.pinimg.com/originals/70/db/a5/70dba52d4a97170d99179db92a6d5dc4.jpg');
+  /* Está en el main.js */
+  /* background-image: url('https://i.pinimg.com/originals/70/db/a5/70dba52d4a97170d99179db92a6d5dc4.jpg');
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url('https://i.pinimg.com/originals/70/db/a5/70dba52d4a97170d99179db92a6d5dc4.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 480px;
   position: fixed;
   top: 0;
