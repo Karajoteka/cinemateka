@@ -115,7 +115,7 @@ function searchPage() {
   headerSection.style.background = '';
   arrowBtn.classList.remove('inactive');
   arrowBtn.classList.remove('header-arrow--white');
-  headerTitle.classList.add('inactive');
+  headerTitle.classList.remove('inactive');
   headerTitleCategory.classList.add('inactive');
   headerCategoryTitle.classList.add('inactive');
   searchForm.classList.remove('inactive');
