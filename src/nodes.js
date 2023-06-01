@@ -14,10 +14,11 @@ const relatedMoviesContainer = document.querySelector('.relatedMovies-scrollCont
 
 // Elements
 const headerTitle = document.querySelector('.header-title');
+const headerTitleCategory = document.querySelector('.header-title-category');
 const arrowBtn = document.querySelector('.header-arrow');
 const headerCategoryTitle = document.querySelector('.header-title--categoryView');
 
-const searchFormInput = document.querySelector('#searchForm input');
+const searchFormInput = document.querySelector('#searchForm-input');
 const searchFormBtn = document.querySelector('#searchBtn');
 
 const trendingBtn = document.querySelector('.trendingPreview-btn');

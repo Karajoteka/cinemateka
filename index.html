@@ -8,19 +8,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/styles.css"> -->
   <link rel="stylesheet" href="./styles/mobile.css">
+  <link rel="stylesheet" href="./styles/desktop.css" media="(min-width: 930px)">
 
   <title>Cinemateka</title>
 </head>
 <body>
   <header id="header" class="header-container">
     <span class="header-arrow inactive">&lt;</span>
-    <h1 class="header-title">Cinemateka</h1>
-    <h2 class="header-title header-title--categoryView inactive">Acción</h2>
+    <a href=""><h1 class="header-title">Cinemateka</h1></a>
+    <h2 class="header-title-category header-title--categoryView inactive">Acción</h2>
 
     <form action="" id="searchForm" class="header-searchForm">
-      <input type="text" placeholder="Star Wars">
+      <input id="searchForm-input" type="text" placeholder="Busca una película">
       <button id="searchBtn">🔍</button>
     </form>
   </header>
@@ -49,17 +49,10 @@
   </section>
 
   <section id="genericList" class="genericList-container inactive">
-    <div class="movie-container">
+    <!-- <div class="movie-container">
       <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-    </div>
+    </div> -->
 
-    <div class="movie-container">
-      <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-    </div>
-
-    <div class="movie-container">
-      <img src="https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg" class="movie-img" alt="Carátula de la película">
-    </div>
     <!-- <button class="trendingPreview-btn seeMore-btn">Ver más</button> -->
   </section>
 

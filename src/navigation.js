@@ -1,9 +1,18 @@
-searchFormBtn.addEventListener('click', 
-  e => searchFormInput.value !== '' ? location.hash = 'search' + searchFormInput.value : e.preventDefault());
+// searchFormBtn.addEventListener('click', 
+//   e => searchFormInput.value !== '' ? location.hash = '#search' + searchFormInput.value : e.preventDefault());
+
+searchFormBtn.addEventListener('click', (event) => {
+  if (searchFormInput.value == '') {
+    event.preventDefault();
+  } else {
+    location.hash = '#search=' + searchFormInput.value; 
+  }
+});
 
 trendingBtn.addEventListener('click', () => {
   location.hash = '#trends';
 });
+
 arrowBtn.addEventListener('click', () => {
   location.hash = window.history.back();
 });
@@ -36,6 +45,7 @@ function homePage() {
   headerSection.style.background = '';
   arrowBtn.classList.add('inactive');
   arrowBtn.classList.remove('header-arrow--white');
+  headerTitleCategory.classList.add('inactive');
   headerTitle.classList.remove('inactive');
   headerCategoryTitle.classList.add('inactive');
   searchForm.classList.remove('inactive');
@@ -56,7 +66,8 @@ function categoriesPage() {
   headerSection.style.background = '';
   arrowBtn.classList.remove('inactive');
   arrowBtn.classList.remove('header-arrow--white');
-  headerTitle.classList.add('inactive');
+  headerTitle.classList.remove('inactive');
+  headerTitleCategory.classList.remove('inactive');
   headerCategoryTitle.classList.remove('inactive');
   searchForm.classList.add('inactive');
 
@@ -83,6 +94,7 @@ function movieDetailsPage() {
   arrowBtn.classList.remove('inactive');
   arrowBtn.classList.add('header-arrow--white');
   headerTitle.classList.add('inactive');
+  headerTitleCategory.classList.add('inactive');
   headerCategoryTitle.classList.add('inactive');
   searchForm.classList.add('inactive');
 
@@ -104,6 +116,7 @@ function searchPage() {
   arrowBtn.classList.remove('inactive');
   arrowBtn.classList.remove('header-arrow--white');
   headerTitle.classList.add('inactive');
+  headerTitleCategory.classList.add('inactive');
   headerCategoryTitle.classList.add('inactive');
   searchForm.classList.remove('inactive');
 
@@ -123,7 +136,8 @@ function trendsPage() {
   headerSection.style.background = '';
   arrowBtn.classList.remove('inactive');
   arrowBtn.classList.remove('header-arrow--white');
-  headerTitle.classList.add('inactive');
+  // headerTitle.classList.add('inactive');
+  headerTitleCategory.classList.remove('inactive');
   headerCategoryTitle.classList.remove('inactive');
   searchForm.classList.add('inactive');
 
