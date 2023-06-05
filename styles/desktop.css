@@ -30,10 +30,6 @@ h3 {
 
 /* Movie Detail */
 
-.movieDetail-container {
-  /*height: 80%;*/
-}
-
 .header-container--long { 
   background-size: contain !important;
 }

@@ -342,6 +342,7 @@ a {
 
 .genericList-container .movie-img {
   width: 100%;
+  min-height: 225px;
   box-shadow: 5px 5px 10px rgb(19, 19, 19);
 }
 
