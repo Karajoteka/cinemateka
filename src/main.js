@@ -16,7 +16,7 @@ const lazyLoader = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const url = entry.target.getAttribute('data-img');
       entry.target.setAttribute('src', url);
-    };
+    }
   });
 });
 
@@ -24,26 +24,43 @@ function createMovies(movies, container, lazyLoad = false) {
   container.innerHTML = '';
 
   movies.forEach(movie => {
-    const movieContainer = document.createElement('div');
-    movieContainer.classList.add('movie-container');
-    movieContainer.addEventListener('click', () => {
-      location.hash = '#movie=' + movie.id;
-    });
+    if (movie.poster_path != null){
 
-    const movieImg = document.createElement('img');
-    movieImg.classList.add('movie-img');
-    movieImg.setAttribute('alt', movie.title);
-    movieImg.setAttribute(
-      lazyLoad ? 'data-img' : 'src',
-      'https://image.tmdb.org/t/p/w300' + movie.poster_path,
-    );
+      const movieContainer = document.createElement('div');
+      movieContainer.classList.add('movie-container');
+      movieContainer.addEventListener('click', () => {
+        location.hash = '#movie=' + movie.id;
+      });
+      
+      const movieImg = document.createElement('img');
+      movieImg.classList.add('movie-img');
+      movieImg.setAttribute('alt', movie.title);
+      if (movie.poster_path != null){
+        movieImg.setAttribute(
+          lazyLoad ? 'data-img' : 'src',
+          'https://image.tmdb.org/t/p/w300' + movie.poster_path,
+        );
+      } else {
+        movieImg.setAttribute(
+          lazyLoad ? 'data-img' : 'src',
+          'https://static.platzi.com/static/images/error/img404.png',
+        );
+      }
 
-    if (lazyLoad) {
-      lazyLoader.observe(movieImg);
+      if (lazyLoad) {
+        lazyLoader.observe(movieImg);
+      }
+
+      movieContainer.appendChild(movieImg);
+      container.appendChild(movieContainer);
     }
-
-    movieContainer.appendChild(movieImg);
-    container.appendChild(movieContainer);
+  
+    /*movieImg.addEventListener('error', () => {
+      movieImg.setAttribute(
+        'src', 
+        movieContainer.style.display = 'none'
+      );
+    });*/
   });
 }
 
@@ -148,6 +165,6 @@ async function getRelatedMoviesId(id) {
   const { data } = await api(`movie/${id}/similar`);
   const relatedMovies = data.results;
 
-  createMovies(relatedMovies, relatedMoviesContainer);
-  relatedMoviesContainer.scrollTo(0,0);
+  createMovies(relatedMovies, relatedMoviesContainer, true);
+  //relatedMoviesContainer.scrollTo(0,0);
 }
