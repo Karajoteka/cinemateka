@@ -37,13 +37,14 @@ function createMovies(
 
       const movieContainer = document.createElement('div');
       movieContainer.classList.add('movie-container');
-      movieContainer.addEventListener('click', () => {
-        location.hash = '#movie=' + movie.id;
-      });
       
       const movieImg = document.createElement('img');
       movieImg.classList.add('movie-img');
       movieImg.setAttribute('alt', movie.title);
+      movieImg.addEventListener('click', () => {
+        location.hash = '#movie=' + movie.id;
+      });
+
       if (movie.poster_path != null){
         movieImg.setAttribute(
           lazyLoad ? 'data-img' : 'src',
@@ -54,13 +55,21 @@ function createMovies(
           lazyLoad ? 'data-img' : 'src',
           'https://static.platzi.com/static/images/error/img404.png',
         );
-      }
+      };
+
+      const movieBtn = document.createElement('button');
+      movieBtn.classList.add('movie-btn');
+      movieBtn.addEventListener('click', () => {
+        movieBtn.classList.toggle('movie-btn--liked');
+        // Agregar película a LS
+      });
 
       if (lazyLoad) {
         lazyLoader.observe(movieImg);
       }
 
       movieContainer.appendChild(movieImg);
+      movieContainer.appendChild(movieBtn);
       container.appendChild(movieContainer);
     }
   

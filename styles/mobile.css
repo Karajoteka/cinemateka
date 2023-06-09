@@ -108,19 +108,20 @@ button {
 
 
 /* Shared */
-.header-container, .trendingPreview-header, .categoriesPreview-container {
+.header-container, .trendingPreview-header, .categoriesPreview-container, .liked-header {
   padding: 0 24px;
 }
 
-.trendingPreview-container, .categoriesPreview-container {
+.trendingPreview-container, .categoriesPreview-container, .liked-container, footer {
   margin-top: 48px;
 }
 
-.trendingPreview-header, .categoriesPreview-title {
+.trendingPreview-header, .categoriesPreview-title, .liked-header {
   margin-bottom: 24px;
 }
 
 .movie-container {
+  position: relative;
   cursor: pointer;
 }
 
@@ -145,6 +146,28 @@ button {
 
 .movie-img {
   border-radius: 8px;
+  min-height: 175px;
+}
+
+.movie-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  padding: 0;
+  margin: 0;
+}
+.movie-btn::before {
+  content: '🤍';
+}
+.movie-btn--liked {
+  background-color: var(--black);
+  box-shadow: 0px 0px 10px 2px var(--black);
+}
+.movie-btn--liked::before {
+  content: '❤️';
 }
 
 .categoriesPreview-list, .categories-list {
@@ -240,7 +263,7 @@ a {
 
 
 /* Trending */
-.trendingPreview-header {
+.trendingPreview-header, .liked-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -252,7 +275,7 @@ a {
   width: 72px;
 }
 
-.trendingPreview-movieList {
+.trendingPreview-movieList, .liked-movieList {
   overscroll-behavior-x: contain;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -262,7 +285,7 @@ a {
   padding-bottom: 16px;
 }
 
-.trendingPreview-movieList .movie-container {
+.trendingPreview-movieList .movie-container, .liked-movieList .movie-container {
   scroll-snap-align: center;
   cursor: pointer;
   width: 150px;
@@ -270,7 +293,7 @@ a {
   margin-right: 8px;
 }
 
-.trendingPreview-movieList .movie-container .movie-img {
+.trendingPreview-movieList .movie-container .movie-img, .liked-movieList .movie-container .movie-img {
   box-shadow: 5px 5px 10px rgb(19, 19, 19);
   height: 225px;
   min-height: 225px;
