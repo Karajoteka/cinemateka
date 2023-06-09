@@ -95,6 +95,7 @@ function createMovies(
       movieBtn.addEventListener('click', () => {
         movieBtn.classList.toggle('movie-btn--liked');
         likeMovie(movie);
+        getLikedMovies();
       });
 
       if (lazyLoad) {
@@ -315,14 +316,10 @@ function getLikedMovies() {
   const likedMovies = likedMoviesList();
   const moviesArray = Object.values(likedMovies);
 
-  likedMoviesListArticle.innerHTML = '';
+  const currentPage = window.location.hash;
 
-  if (location.hash === '#home') {
-    if (moviesArray.length === 0) {
-      likedMoviesSection.classList.add('inactive');
-    } else {
-      likedMoviesSection.classList.remove('inactive');
-    }
+  if (currentPage === '' && moviesArray.length > 0) {
+    likedMoviesSection.classList.remove('inactive');
   } else {
     likedMoviesSection.classList.add('inactive');
   }
